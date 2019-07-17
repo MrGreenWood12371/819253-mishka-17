@@ -4,31 +4,32 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="">
-      <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Логотип академии">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип академии">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list site-nav">
         <li class="site-nav__item">
-          <a href="catalog.html">Каталог товаров</a>
+          <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="site-nav__item">
-          <a href="form.html">Вязание на заказ</a>
+          <a class="site-nav__link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
-      <div class="search">
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
-          <input type="text" name="site-search" id="site-search" placeholder="Поиск по сайту">
+      <div class="navigation-search">
+        <form class="navigation-search__item search-form" action="https://echo.htmlacademy.ru" method="GET">
+          <input class="search-form__input" type="text" name="site-search" id="site-search" placeholder="Поиск по сайту">
         </form>
       </div>
       <ul class="main-nav__list user-list">
         <li class="user-list__item">
-          <a href="#">Корзина: пока пуста</a>
+          <a class="user-list__link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
@@ -41,10 +42,10 @@
       </header>
       <ul class="promo__list promo-goods">
         <li class="promo-goods__item">
-          <a href="#">Предметы интерьера</a>
+          <a class="promo-goods__link" href="#">Предметы интерьера</a>
         </li>
         <li class="promo-goods__item">
-          <a href="#">Детские игрушки</a>
+          <a class="promo-goods__link" href="#">Детские игрушки</a>
         </li>
       </ul>
     </section>
@@ -57,28 +58,28 @@
         <div class="best-product__description">
           <p class="best-product__advantages">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и
             трех размерах.</p>
-          <table class="best-product__list description__list">
+          <table class="best-product__list">
             <tr>
-              <td class="description__field">
+              <td class="best-product__field">
                 Цвет:
               </td>
-              <td class="description__value">
+              <td class="best-product__value">
                 «Тиффани»/серый
               </td>
             </tr>
             <tr>
-              <td class="description__field">
+              <td class="best-product__field">
                 Диаметр:
               </td>
-              <td class="description__value">
+              <td class="best-product__value">
                 25 см
               </td>
             </tr>
             <tr>
-              <td class="description__field">
+              <td class="best-product__field">
                 Высота:
               </td>
-              <td class="description__value">
+              <td class="best-product__value">
                 15 см
               </td>
             </tr>
@@ -88,13 +89,14 @@
           <img src="http://placehold.it/150x100" alt="Вязаные корзинки">
         </picture>
         <div class="best-product__price">
-          <p class="best-product__value">Цена: 990 руб.</p>
+          <p class="best-product__price-value">Цена: 990 руб.</p>
           <button class="best-product__button button" type="button">Заказать</button>
         </div>
       </article>
     </section>
     <section class="about-us">
       <div class="about-us__advantages product-advantages">
+        <h2 class="product-advantages__title">Коротко о нас:</h2>
         <ul class="product-advantages__list">
           <li class="product-advantages__item">
             Экологически чистые материалы
@@ -153,7 +155,7 @@
               e-mail:
             </td>
             <td class="contacts__value">
-              <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
             </td>
           </tr>
           <tr>
