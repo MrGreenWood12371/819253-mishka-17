@@ -4,31 +4,33 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Логотип академии">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип академии">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list site-nav">
         <li class="site-nav__item">
-          <a href="catalog.html">Каталог товаров</a>
+          <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="site-nav__item">
-          <a href="form.html">Вязание на заказ</a>
+          <a class="site-nav__link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
-      <div class="search">
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
-          <input type="text" name="site-search" id="site-search" placeholder="Поиск по сайту">
+      <div class="navigation-search">
+        <form class="navigation-search__item search-form" action="https://echo.htmlacademy.ru" method="GET">
+          <input class="search-form__input" type="text" name="site-search" id="site-search"
+            placeholder="Поиск по сайту">
         </form>
       </div>
       <ul class="main-nav__list user-list">
         <li class="user-list__item">
-          <a href="#">Корзина: пока пуста</a>
+          <a class="user-list__link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
@@ -115,7 +117,7 @@
         </fieldset>
         <fieldset class="order-form__item addition-form">
           <legend class="addition-form__legend filter-legend">Доп</legend>
-          <textarea placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="addition-form__input" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <small class="order-form__remind">*Поля обязательны для заполнения</small>
         <button class="order-form__submit button" type="submit">Отправить заказ</button>
