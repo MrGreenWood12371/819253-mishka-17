@@ -1,6 +1,32 @@
+.user-list {
+  .list-reset();
+}
+
 .user-list__link {
   .bold-font();
   font-size: 17px;
   line-height: 24px;
   color: @link-color;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .user-list {
+    order: 2;
+    display: flex;
+  }
+
+  .user-list__search-text {
+    display: none;
+  }
+  // Временно для построения сетки
+  .user-list__item:first-child {
+    order: 2;
+    width: 265px;
+  }
+
+  .user-list__item:last-child {
+    width: 85px;
+  }
+  // Временно для построения сетки
 }

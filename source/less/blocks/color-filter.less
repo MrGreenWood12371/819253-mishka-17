@@ -1,3 +1,13 @@
+.color-filter__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-filter__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .color-filter__legend {
   .filter-title();
 }
@@ -6,4 +16,34 @@
   .bold-font();
   font-size: 17px;
   line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .color-filter__wrapper {
+    flex-direction: row;
+  }
+
+  .color-filter__input-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 475px;
+  }
+
+  .color-filter__check {
+    width: 120px;
+  }
+
+  .color-filter__check:not(:nth-child(2n)) {
+    margin-right: 130px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .color-filter__input-wrapper {
+    width: 730px;
+  }
+
+  .color-filter__check:not(:nth-child(3n)) {
+    margin-right: 120px;
+  }
 }

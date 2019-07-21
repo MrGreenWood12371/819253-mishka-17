@@ -1,3 +1,8 @@
+.order-form__item-wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .order-form__ask {
   .regular-font();
   font-size: 13px;
@@ -10,4 +15,18 @@
   font-size: 14px;
   line-height: 16px;
   color: @item-color;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__item-wrapper {
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__item-wrapper {
+    width: 1050px;
+  }
 }

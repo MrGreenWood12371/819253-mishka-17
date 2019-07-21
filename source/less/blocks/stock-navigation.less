@@ -1,0 +1,23 @@
+.stock-navigation {
+  display: none;
+}
+
+.stock-navigation__link {
+  .bold-font();
+  font-size: 15px;
+  line-height: 24px;
+  color: @link-color;
+  text-decoration: none;
+}
+
+.stock-navigation__item:first-child {
+  margin-right: 60px;
+}
+
+@media (min-width: @desktop-width) {
+  .stock-navigation {
+    .list-reset();
+    display: flex;
+    order: 3;
+  }
+}

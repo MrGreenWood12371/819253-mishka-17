@@ -1,3 +1,9 @@
+.promo-goods {
+  .list-reset();
+  display: flex;
+  flex-direction: column;
+}
+
 .promo-goods__item {
   font-size: 19px;
   line-height: 24px;
@@ -5,4 +11,21 @@
 
 .promo-goods__link {
   color: @link-color;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .promo-goods {
+    flex-direction: row;
+  }
+
+  .promo-goods__item {
+    width: 334px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo-goods__item {
+    width: 525px;
+  }
 }

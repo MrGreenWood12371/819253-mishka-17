@@ -1,3 +1,11 @@
+.contacts__list {
+  .list-reset();
+}
+
+.contacts__item {
+  display: flex;
+}
+
 .contacts__title {
   .bold-font();
   font-size: 18px;
@@ -11,4 +19,29 @@
   font-size: 15px;
   line-height: 30px;
   color: @item-color;
+  margin: 0;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .contacts__list {
+    flex-direction: column;
+  }
 }

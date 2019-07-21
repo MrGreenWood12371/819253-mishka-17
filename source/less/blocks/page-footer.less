@@ -1,3 +1,27 @@
 .page-footer {
   background-color: @image-color;
 }
+
+.page-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 1050px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
