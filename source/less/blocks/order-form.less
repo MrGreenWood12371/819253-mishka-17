@@ -1,3 +1,11 @@
+.order-form__item {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .order-form__ask {
   .regular-font();
   font-size: 13px;
@@ -10,4 +18,24 @@
   font-size: 14px;
   line-height: 16px;
   color: @item-color;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__item {
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__item {
+    width: 1050px;
+  }
+
+  .order-form__submit {
+    margin-left: 130px;
+    margin-right: auto;
+    order: -1;
+  }
 }

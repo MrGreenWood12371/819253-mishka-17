@@ -1,3 +1,8 @@
+.reviews {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .reviews__title {
   .bold-font();
   font-size: 25px;
@@ -22,4 +27,42 @@
 .reviews__author-id {
   font-size: 17px;
   line-height: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .reviews__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .reviews__title {
+    margin: 0;
+    order: 1;
+  }
+
+  .reviews__list {
+    display: flex;
+    order: 3;
+  }
+
+  .reviews__buttons-wrapper {
+    margin-top: auto;
+  }
+
+  .reviews__write {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    width: 1050px;
+  }
 }

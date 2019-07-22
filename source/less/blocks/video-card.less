@@ -1,3 +1,8 @@
+.video-card {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .video-card__title {
   .bold-font();
   font-size: 15px;
@@ -9,4 +14,36 @@
   font-size: 15px;
   line-height: 24px;
   color: @item-color;
+}
+
+@media (min-width: @tablet-width) {
+  .video-card {
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .video-card__video-content {
+    width: 668px;
+    height: 455px;
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video-card {
+    width: 1050px;
+    height: 455px;
+  }
+
+  .video-card__text {
+    width: 230px;
+  }
+
+  .video-card__video-content {
+    width: 680px;
+  }
 }

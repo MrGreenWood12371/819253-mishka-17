@@ -1,3 +1,8 @@
+.type-filter__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .type-filter__radio {
   .bold-font();
   font-size: 17px;
@@ -6,4 +11,10 @@
 
 .type-filter__legend {
   .filter-title();
+}
+
+@media (min-width: @tablet-width) {
+  .type-filter__input-wrapper {
+    margin-left: 130px;
+  }
 }

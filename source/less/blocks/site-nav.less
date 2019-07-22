@@ -1,6 +1,28 @@
+.site-nav {
+  .list-reset();
+}
+
 .site-nav__link {
   .bold-font();
   font-size: 17px;
   line-height: 24px;
   color: @link-color;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .site-nav {
+    order: 3;
+    display: flex;
+  }
+
+  .site-nav__item:first-child {
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-nav {
+    order: -1;
+  }
 }

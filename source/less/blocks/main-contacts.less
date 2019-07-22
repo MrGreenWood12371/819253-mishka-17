@@ -1,23 +1,10 @@
-.promo {
-  .bold-font();
+.main-contacts {
   width: 320px;
   margin: 0 auto;
 }
 
-.promo__header {
-  background-color: @image-color;
-  font-size: 27px;
-  line-height: 30px;
-}
-
-.promo__title {
-  text-align: center;
-  font-size: 27px;
-  line-height: 30px;
-}
-
 @media (min-width: @tablet-width) {
-  .promo {
+  .main-contacts {
     width: 668px;
     padding-left: 50px;
     padding-right: 50px;
@@ -25,9 +12,16 @@
 }
 
 @media (min-width: @desktop-width) {
-  .promo {
+  .main-contacts {
     width: 1050px;
     padding-left: 50px;
     padding-right: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main-contacts__item {
+    width: 525px;
   }
 }
