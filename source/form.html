@@ -63,8 +63,8 @@
       <form class="order-form" action="https://echo.htmlacademy.ru" method="GET">
         <p class="order-form__ask">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
           свяжемся с вами, чтобы уточнить детали.</p>
-        <fieldset class="order-form__item type-filter">
-          <div class="order-form__item-wrapper type-filter__wrapper">
+        <div class="order-form__item-wrapper">
+          <fieldset class="order-form__item type-filter">
             <legend class="type-filter__legend filter-legend">Тип</legend>
             <div class="type-filter__input-wrapper">
               <label class="type-filter__radio">
@@ -78,10 +78,10 @@
                 Детская игрушка
               </label>
             </div>
-          </div>
-        </fieldset>
-        <fieldset class="order-form__item color-filter">
-          <div class="order-form__item-wrapper color-filter__wrapper">
+          </fieldset>
+        </div>
+        <div class="order-form__item-wrapper">
+          <fieldset class="order-form__item color-filter">
             <legend class="color-filter__legend filter-legend">Цвет</legend>
             <div class="color-filter__input-wrapper">
               <label class="color-filter__check">
@@ -115,10 +115,10 @@
                 Оранжевый
               </label>
             </div>
-          </div>
-        </fieldset>
-        <fieldset class="order-form__item name-form">
-          <div class="order-form__item-wrapper name-form__wrapper">
+          </fieldset>
+        </div>
+        <div class="order-form__item-wrapper">
+          <fieldset class="order-form__item name-form">
             <legend class="name-form__legend filter-legend">фио</legend>
             <div class="name-form__input-wrapper">
               <label class="name-form__field">
@@ -134,27 +134,27 @@
                 <input class="name-form__input form-value" type="text" placeholder="Отчество, если желаете">
               </label>
             </div>
-          </div>
-        </fieldset>
-        <fieldset class="order-form__item phone-form">
-          <div class="order-form__item-wrapper phone-form__wrapper">
+          </fieldset>
+        </div>
+        <div class="order-form__item-wrapper">
+          <fieldset class="order-form__item phone-form">
             <legend class="phone-form__legend filter-legend">тел</legend>
             <input class="phone-form__number form-value" type="text" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
+        <div class="order-form__item-wrapper">
         <fieldset class="order-form__item email-form">
-          <div class="order-form__item-wrapper email-form__wrapper">
             <legend class="email-form__legend filter-legend">E-mail</legend>
             <input class="email-form__value form-value" type="email" placeholder="Ваш Email*" required>
-          </div>
         </fieldset>
+        </div>
+        <div class="order-form__item-wrapper">
         <fieldset class="order-form__item addition-form">
-          <div class="order-form__item-wrapper addition-form__wrapper">
             <legend class="addition-form__legend filter-legend">Доп</legend>
             <textarea class="addition-form__input" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </div>
         </fieldset>
-        <div class="order-form__item-wrapper">
+        </div>
+        <div class="order-form__item">
           <small class="order-form__remind">*Поля обязательны для заполнения</small>
           <button class="order-form__submit button" type="submit">Отправить заказ</button>
         </div>
