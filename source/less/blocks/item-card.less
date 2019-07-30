@@ -1,3 +1,11 @@
+.item-card {
+  border: 1px solid #cccccc;
+}
+
+.item-card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .item-card__image {
   background-color: #f1f1f1;
 }
@@ -6,6 +14,16 @@
   .bold-font();
   font-size: 17px;
   line-height: 24px;
+  margin-top: 23px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.item-card__description-wrapper {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
 }
 
 .item-card__description {
@@ -13,10 +31,15 @@
   font-size: 13px;
   line-height: 30px;
   color: @item-color;
+  margin: 0;
 }
 
 .item-card__price-wrapper {
   display: flex;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .item-card__price {
@@ -31,22 +54,71 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 335px;
+    border: none;
+  }
+
+  .item-card:not(:last-child) {
+    margin-bottom: 55px;
+  }
+
+  .item-card__description-wrapper {
+    width: 230px;
+    margin-left: 0;
+    margin-right: 50px;
+    border-bottom: none;
+  }
+
+  .item-card__name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .item-card__description {
+    font-size: 15px;
+    line-height: 30px;
   }
 
   .item-card__image {
     width: 334px;
     height: 335px;
   }
+
+  .item-card__price-wrapper {
+    margin: auto 0 0 5px;
+  }
+
+  .item-card__price {
+    font-size: 17px;
+    line-height: 24px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .item-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 315px;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .item-card:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .item-card__description-wrapper {
+    padding: 0;
+    margin-bottom: 13px;
+    margin-left: 28px;
   }
 
   .item-card__image {
-    width: 315px;
-    height: 460px;
+    width: 316px;
+    height: 462px;
+  }
+
+  .item-card__price-wrapper {
+    margin: auto 0 0 26px;
   }
 }

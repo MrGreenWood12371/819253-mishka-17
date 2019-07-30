@@ -1,27 +1,80 @@
 .main-contacts {
-  width: 320px;
+  padding-bottom: 55px;
+}
+
+.main-contacts__item:first-child {
+  width: 260px;
   margin: 0 auto;
+  padding: 44px 30px 40px 30px;
+}
+
+.main-contacts__button-wrapper {
+  width: 260px;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.main-contacts__button {
+  padding: 14px 50px;
+  text-decoration: none;
 }
 
 @media (min-width: @tablet-width) {
-  .main-contacts {
+  .main-contacts__item:first-child {
     width: 668px;
+    padding-top: 74px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
+
+  .main-contacts__button-wrapper {
+    text-align: center;
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .main-contacts__button {
+    padding: 15px 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-contacts {
+    position: relative;
     width: 1050px;
+    padding-top: 110px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 85px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
+  .main-contacts__item:first-child {
+    width: auto;
+    padding-left: 173px;
+    padding-right: 0;
+    margin: 0 20px 0 0;
+  }
+
   .main-contacts__item {
     width: 525px;
+  }
+
+  .main-contacts__button-wrapper {
+    position: absolute;
+    bottom: 102px;
+    left: 225px;
+    width: auto;
+    margin: 0;
+    padding: 0;
   }
 }

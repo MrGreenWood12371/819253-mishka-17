@@ -5,12 +5,44 @@
 }
 
 .promo-goods__item {
+  position: relative;
   font-size: 19px;
   line-height: 24px;
+  padding: 30px 185px 30px 29px;
+}
+
+.promo-goods__item:first-child {
+  background-color: @seafoam-blue;
+}
+
+.promo-goods__item:first-child::after {
+  position: absolute;
+  content: "";
+  top: 27px;
+  right: 37px;
+  width: 40px;
+  height: 62px;
+  background-image: url("../../img/icon-interior.svg");
+  opacity: 0.5;
+}
+
+.promo-goods__item:last-child {
+  background-color: @aqua-marine;
+}
+
+.promo-goods__item:last-child::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../../img/icon-toy.svg");
+  opacity: 0.5;
 }
 
 .promo-goods__link {
-  color: @link-color;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -19,13 +51,25 @@
     flex-direction: row;
   }
 
-  .promo-goods__item {
-    width: 334px;
+  .promo-goods__item:first-child {
+    padding: 35px 187px 34px 36px;
+  }
+
+  .promo-goods__item:last-child {
+    padding: 35px 204px 34px 36px;
+  }
+
+  .promo-goods__link {
+    letter-spacing: 1.5px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .promo-goods__item {
-    width: 525px;
+  .promo-goods__item:first-child {
+    padding: 35px 377px 34px 37px;
+  }
+
+  .promo-goods__item:last-child {
+    padding: 35px 395px 34px 36px;
   }
 }
