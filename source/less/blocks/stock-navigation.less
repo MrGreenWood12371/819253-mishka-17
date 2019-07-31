@@ -1,5 +1,6 @@
 .stock-navigation {
   display: none;
+  z-index: 3;
 }
 
 .stock-navigation__link {
@@ -8,6 +9,14 @@
   line-height: 24px;
   color: @link-color;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 .stock-navigation__item:first-child {
@@ -19,5 +28,13 @@
     .list-reset();
     display: flex;
     order: 3;
+  }
+
+  .stock-navigation__item {
+    margin-top: 22px;
+  }
+
+  .stock-navigation__link {
+    letter-spacing: 0.5px;
   }
 }

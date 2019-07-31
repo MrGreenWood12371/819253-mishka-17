@@ -1,5 +1,12 @@
 .site-nav {
   .list-reset();
+  text-align: center;
+}
+
+.site-nav__item {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #cccccc;
 }
 
 .site-nav__link {
@@ -8,12 +15,24 @@
   line-height: 24px;
   color: @link-color;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .site-nav {
     order: 3;
     display: flex;
+  }
+
+  .site-nav__item {
+    border: none;
   }
 
   .site-nav__item:first-child {
@@ -24,5 +43,14 @@
 @media (min-width: @desktop-width) {
   .site-nav {
     order: -1;
+  }
+
+  .site-nav__item:first-child {
+    padding-right: 35px;
+    border-right: 1px solid #cccccc;
+  }
+
+  .site-nav__link {
+    letter-spacing: 0.5px;
   }
 }

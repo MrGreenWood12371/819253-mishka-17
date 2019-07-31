@@ -1,10 +1,20 @@
 .main-catalog {
-  width: 320px;
+  padding-top: 35px;
+}
+
+.main-catalog__wrapper {
+  width: 260px;
   margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 @media (min-width: @tablet-width) {
   .main-catalog {
+    padding-top: 54px;
+  }
+
+  .main-catalog__wrapper {
     width: 668px;
     padding-left: 50px;
     padding-right: 50px;
@@ -13,7 +23,12 @@
 
 @media (min-width: @desktop-width) {
   .main-catalog {
+    padding-top: 127px;
+  }
+
+  .main-catalog__wrapper {
     width: 1050px;
+    padding-bottom: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

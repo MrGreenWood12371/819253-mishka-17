@@ -1,9 +1,25 @@
+.order-form {
+  padding-top: 15px;
+  padding-bottom: 55px;
+}
+
 .order-form__item {
   position: relative;
-  width: 320px;
+  width: 260px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: none;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+}
+
+.order-form__ask-wrapper {
+  width: 260px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 .order-form__ask {
@@ -11,6 +27,7 @@
   font-size: 13px;
   line-height: 24px;
   color: @item-color;
+  letter-spacing: 0.5px;
 }
 
 .order-form__remind {
@@ -18,24 +35,89 @@
   font-size: 14px;
   line-height: 16px;
   color: @item-color;
+  margin-bottom: 30px;
+}
+
+.order-form__submit {
+  font-size: 17px;
+  line-height: 17px;
+  padding: 17px 45px;
 }
 
 @media (min-width: @tablet-width) {
+  .order-form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   .order-form__item {
     width: 668px;
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  .order-form__item:last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .order-form__item-wrapper:nth-child(3),
+  .order-form__item-wrapper:nth-child(5),
+  .order-form__item-wrapper:nth-child(6) {
+    background-color: @image-color;
+  }
+
+  .order-form__ask-wrapper {
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .order-form__ask {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order-form__remind {
+    font-size: 17px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    margin-left: auto;
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .order-form__submit {
+    padding: 16px 30px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .order-form {
+    padding-top: 100px;
+  }
+
+  .order-form__ask-wrapper {
+    width: 1050px;
+  }
+
+  .order-form__ask {
+    width: 672px;
+    margin-left: 175px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
   .order-form__item {
     width: 1050px;
   }
 
   .order-form__submit {
-    margin-left: 130px;
-    margin-right: auto;
-    order: -1;
+    margin-left: 175px;
+  }
+
+  .order-form__remind {
+    margin-left: 173px;
   }
 }
