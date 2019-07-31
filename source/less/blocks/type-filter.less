@@ -36,6 +36,14 @@
   border-radius: 50%;
 }
 
+.type-filter__radio:hover .type-filter__radio-button {
+  border-color: @seafoam-blue;
+}
+
+.type-filter__radio:active .type-filter__radio-button {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
 .type-filter__radio-input:checked + .type-filter__radio-button::before {
   position: absolute;
   content: "";
