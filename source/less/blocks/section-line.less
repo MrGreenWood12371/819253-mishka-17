@@ -1,0 +1,24 @@
+.section-line {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  min-height: 8px;
+  background-image: url("../../img/bg-zigzag-line.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .section-line {
+    bottom: -30px;
+    min-height: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .section-line {
+    min-height: 23px;
+  }
+}

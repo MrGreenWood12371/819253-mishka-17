@@ -29,9 +29,11 @@
   .site-nav {
     order: 3;
     display: flex;
+    z-index: 2;
   }
 
   .site-nav__item {
+    padding-top: 0;
     border: none;
   }
 
@@ -43,6 +45,10 @@
 @media (min-width: @desktop-width) {
   .site-nav {
     order: -1;
+  }
+
+  .site-nav__item {
+    padding-top: 30px;
   }
 
   .site-nav__item:first-child {

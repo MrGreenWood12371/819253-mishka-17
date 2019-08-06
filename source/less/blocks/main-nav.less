@@ -68,6 +68,11 @@
   }
 }
 
+.main-nav--opened .site-nav {
+  border-top: 1px solid #cccccc;
+}
+
+
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .site-nav__item {
     display: none;
@@ -87,6 +92,10 @@
 
   .main-nav--nojs .user-list__item {
     display: block;
+  }
+
+  .main-nav--nojs .site-nav {
+    border-top: 1px solid #cccccc;
   }
 }
 
@@ -115,14 +124,15 @@
 
   .main-nav__text {
     display: block;
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 30px;
     margin-left: 125px;
     order: 3;
+    z-index: 2;
   }
 
   .main-nav__text-catalog {
-    padding-top: 22px;
+    padding-top: 0;
   }
 }
 

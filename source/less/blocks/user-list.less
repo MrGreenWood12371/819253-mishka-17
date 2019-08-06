@@ -29,13 +29,14 @@
 .user-list__link-icon {
   position: absolute;
   left: -35px;
+  fill: #cccccc;
 }
 
 .user-list__link:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.user-list__link:hover path {
+.user-list__link:hover .user-list__link-icon {
   fill: @seafoam-blue;
 }
 
@@ -43,13 +44,14 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-list__link:focus path {
+.user-list__link:focus svg {
   fill-opacity: 0.3;
 }
 
 .user-list__basket-icon {
   position: absolute;
   left: -10px;
+  fill: red;
 }
 
 @media (min-width: @tablet-width) {
