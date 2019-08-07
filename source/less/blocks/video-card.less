@@ -1,4 +1,5 @@
 .video-card {
+  position: relative;
   padding-top: 25px;
   padding-bottom: 43px;
 }
@@ -32,6 +33,39 @@
   height: 150px;
 }
 
+.video-card:hover .video-card__description {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.video-card:active .video-card__description {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.video-card__play-button {
+  position: absolute;
+  top: 150px;
+  left: 80px;
+  width: 101px;
+  height: 77px;
+  border-radius: 20px;
+  background-image: url("../../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &:hover {
+    width: 121px;
+    height: 92px;
+  }
+
+  &:focus {
+    width: 81px;
+    height: 62px;
+    opacity: 0.3;
+    outline: none;
+  }
+}
+
 .video-card__text {
   .regular-font();
   width: 180px;
@@ -55,6 +89,11 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+
+  .video-card__content {
+    border: 1px solid #cccccc;
   }
 
   .video-card__title {
@@ -62,7 +101,17 @@
     margin-left: 106px;
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
+    order: 1;
+  }
+
+  .video-card__description {
+    padding-top: 70px;
+    padding-bottom: 41px;
+    margin-top: -60px;
+    border: 1px solid @image-color;
+    border-top: none;
+    order: 2;
   }
 
   .video-card__title::before {
@@ -74,7 +123,12 @@
     width: 668px;
     height: 455px;
     order: -1;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
+  }
+
+  .video-card__play-button {
+    top: 220px;
+    left: 285px;
   }
 
   .video-card__text {
@@ -87,7 +141,8 @@
 
   .video-card__button {
     text-align: center;
-    padding: 20px 222px 16px 222px;
+    padding: 13px 222px 16px 217px;
+    margin-left: 40px;
   }
 }
 
@@ -95,6 +150,7 @@
   .video-card {
     flex-direction: row;
     position: relative;
+    padding-bottom: 43px;
   }
 
   .video-card__title {
@@ -111,20 +167,32 @@
   }
 
   .video-card__description {
-    padding-top: 165px;
-    margin-left: 45px;
+    padding-top: 160px;
+    padding-left: 45px;
+    padding-right: 53px;
+    padding-bottom: 0;
+    margin-top: 0;
+    border-top: 1px solid @image-color;
   }
 
   .video-card__text {
     width: 230px;
+    margin-left: 35px;
     margin-bottom: 60px;
   }
 
   .video-card__video-content {
     width: 680px;
+    margin-bottom: 0;
+  }
+
+  .video-card__play-button {
+    top: 210px;
+    left: 290px;
   }
 
   .video-card__button {
-    padding: 14px 45px;
+    padding: 14px 43px;
+    margin-left: 36px;
   }
 }
