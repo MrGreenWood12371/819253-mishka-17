@@ -8,24 +8,22 @@
 
 .phone-form__number {
   position: relative;
-  padding: 15px 90px 15px 0;
+  padding: 21px 90px 15px 0;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid #000000;
+  background-color: transparent;
   width: 170px;
 }
 
 .phone-form__icon {
   position: absolute;
-  content: "";
   top: 32px;
   right: 37px;
   width: 25px;
   height: 25px;
-  background-image: url("../../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: #cccccc;
 }
 
 .phone-form__number::placeholder {
@@ -34,8 +32,12 @@
   line-height: 19px;
 }
 
-.phone-form__number:hover {
+.phone-form:hover .phone-form__number {
   border-color: @seafoam-blue;
+}
+
+.phone-form:hover .phone-form__icon {
+  fill: @seafoam-blue;
 }
 
 @media (min-width: @tablet-width) {

@@ -22,7 +22,7 @@
   left: -56px;
   width: 32px;
   height: 22px;
-  background-image: url("../../img/icon-video.svg");
+  background-image: url("../img/icon-video.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -31,13 +31,14 @@
   margin-bottom: 13px;
   width: 260px;
   height: 150px;
+  background-image: url("../img/video-mobile@1x.jpg");
 }
 
-.video-card:hover .video-card__description {
+.video-card:hover {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.video-card:active .video-card__description {
+.video-card:active {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -48,7 +49,7 @@
   width: 101px;
   height: 77px;
   border-radius: 20px;
-  background-image: url("../../img/icon-play.svg");
+  background-image: url("../img/icon-play.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -84,11 +85,16 @@
   margin-left: 33px;
 }
 
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  background-image: url("../img/video-mobile@2x.jpg");
+}
+
 @media (min-width: @tablet-width) {
   .video-card {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-top: 0;
     padding-bottom: 0;
   }
 
@@ -98,6 +104,7 @@
 
   .video-card__title {
     width: 245px;
+    margin-top: 33px;
     margin-left: 106px;
     font-size: 20px;
     line-height: 24px;
@@ -123,7 +130,8 @@
     width: 668px;
     height: 455px;
     order: -1;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    background-image: url("../img/video-tablet@1x.jpg");
   }
 
   .video-card__play-button {
@@ -144,19 +152,22 @@
     padding: 13px 222px 16px 217px;
     margin-left: 40px;
   }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/video-tablet@2x.jpg");
+  }
 }
 
 @media (min-width: @desktop-width) {
   .video-card {
     flex-direction: row;
     position: relative;
-    padding-bottom: 43px;
   }
 
   .video-card__title {
     position: absolute;
     right: 140px;
-    top: 120px;
+    top: 96px;
     width: 150px;
     margin: 0;
   }
@@ -167,12 +178,16 @@
   }
 
   .video-card__description {
-    padding-top: 160px;
+    padding-top: 166px;
     padding-left: 45px;
     padding-right: 53px;
     padding-bottom: 0;
     margin-top: 0;
     border-top: 1px solid @image-color;
+  }
+
+  .video-card__picture {
+    height: 455px;
   }
 
   .video-card__text {
@@ -184,15 +199,20 @@
   .video-card__video-content {
     width: 680px;
     margin-bottom: 0;
+    background-image: url("../img/video-desktop@1x.jpg");
   }
 
   .video-card__play-button {
-    top: 210px;
+    top: 188px;
     left: 290px;
   }
 
   .video-card__button {
     padding: 14px 43px;
     margin-left: 36px;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/video-desktop@2x.jpg");
   }
 }

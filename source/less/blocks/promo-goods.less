@@ -8,7 +8,6 @@
   position: relative;
   font-size: 19px;
   line-height: 24px;
-  padding: 30px 185px 30px 29px;
   transition: all 0.5s;
 
   &:hover {
@@ -27,7 +26,7 @@
   right: 37px;
   width: 40px;
   height: 62px;
-  background-image: url("../../img/icon-interior.svg");
+  background-image: url("../img/icon-interior.svg");
   opacity: 0.5;
 }
 
@@ -38,17 +37,19 @@
 .promo-goods__item:last-child::after {
   position: absolute;
   content: "";
-  top: 20px;
+  top: 25px;
   right: 27px;
   width: 60px;
   height: 60px;
-  background-image: url("../../img/icon-toy.svg");
+  background-image: url("../img/icon-toy.svg");
   opacity: 0.5;
 }
 
 .promo-goods__link {
+  display: block;
   color: #ffffff;
   text-decoration: none;
+  padding: 28px 190px 28px 29px;
 }
 
 @media (min-width: @tablet-width) {
@@ -56,11 +57,15 @@
     flex-direction: row;
   }
 
-  .promo-goods__item:first-child {
+  .promo-goods__item:active .promo-goods__link {
+    opacity: 0.3;
+  }
+
+  .promo-goods__item:first-child .promo-goods__link {
     padding: 35px 187px 34px 36px;
   }
 
-  .promo-goods__item:last-child {
+  .promo-goods__item:last-child .promo-goods__link {
     padding: 35px 204px 34px 36px;
   }
 
@@ -70,21 +75,23 @@
 }
 
 @media (min-width: @desktop-width) {
-  .promo-goods__item:first-child {
+  .promo-goods__item:first-child .promo-goods__link {
     width: 111px;
+    height: 50px;
     padding: 35px 377px 34px 37px;
 
-    & .promo-goods__link {
+    & .promo-goods__link .promo-goods__link {
       width: 111px;
+      height: 50px;
     }
   }
 
-  .promo-goods__item:last-child {
-    width: 94px;
-    padding: 35px 395px 34px 36px;
+  .promo-goods__item:active .promo-goods__item::after {
+    opacity: 0.3;
+  }
 
-    & .promo-goods__link {
-      width: 94px;
-    }
+  .promo-goods__item:last-child .promo-goods__link {
+    padding: 35px 395px 34px 37px;
+    width: 94px;
   }
 }
