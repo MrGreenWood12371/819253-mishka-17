@@ -79,6 +79,13 @@ gulp.task("copy", function () {
   .pipe(gulp.dest("build"));
 });
 
+gulp.task("normalize", function () {
+  return gulp.src([
+    "source/css/**/normalize.css"
+  ])
+  .pipe(gulp.dest("build/css"));
+});
+
 gulp.task("server", function () {
   server.init({
     server: "build/"
@@ -99,6 +106,7 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "sprite",
+  "normalize",
   "html"
 ));
 gulp.task("start", gulp.series("build", "server"));
