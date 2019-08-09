@@ -7,6 +7,7 @@
 }
 
 .email-form__value {
+  .regular-font();
   position: relative;
   padding: 20px 90px 17px 0;
   border-top: none;
@@ -15,28 +16,32 @@
   border-bottom: 2px solid #000000;
   width: 170px;
   background-color: transparent;
-
-  &:hover {
-    border-color: @seafoam-blue;
-  }
 }
 
 .email-form__value::placeholder {
-  .regular-font();
   font-size: 17px;
   line-height: 18px;
 }
 
+.email-form__value:-ms-input-placeholder {
+  .regular-font();
+}
+
 .email-form__icon {
   position: absolute;
-  content: "";
   top: 38px;
   right: 35px;
   width: 32px;
   height: 22px;
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: #cccccc;
+}
+
+.email-form:hover .email-form__value {
+  border-color: @seafoam-blue;
+}
+
+.email-form:hover .email-form__icon {
+  fill: @seafoam-blue;
 }
 
 @media (min-width: @tablet-width) {

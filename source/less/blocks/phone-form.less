@@ -7,6 +7,7 @@
 }
 
 .phone-form__number {
+  .regular-font();
   position: relative;
   padding: 21px 90px 15px 0;
   border-top: none;
@@ -27,9 +28,12 @@
 }
 
 .phone-form__number::placeholder {
-  .regular-font();
   font-size: 19px;
   line-height: 19px;
+}
+
+.phone-form__number:-ms-input-placeholder {
+  .regular-font();
 }
 
 .phone-form:hover .phone-form__number {

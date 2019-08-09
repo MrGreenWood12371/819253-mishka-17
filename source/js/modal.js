@@ -1,10 +1,11 @@
-var modalButton = document.querySelector('.purchase-button');
+var modalButton = document.querySelectorAll('.purchase-button');
 var modalWindow = document.querySelector('.modal-card');
 
-
-modalButton.addEventListener('click', function() {
-  modalWindow.classList.add('modal-card--show')
-})
+for (var i = 0; i < modalButton.length; i++) {
+  modalButton[i].addEventListener('click', function() {
+    modalWindow.classList.add('modal-card--show')
+  })
+}
 
 window.addEventListener('keydown', function(event){
   if (event.keyCode === 27) {
