@@ -71,6 +71,10 @@
   left: 0;
   border: 2px solid @item-color;
   opacity: 0.1;
+
+  &:hover {
+    opacity: 0.3;
+  }
 }
 
 .modal-card__radio-input:checked + .modal-card__radio-button {
@@ -79,6 +83,7 @@
 }
 
 .modal-card__submit-button {
+  border: none;
   text-transform: uppercase;
   color: #ffffff;
   font-size: 17px;
